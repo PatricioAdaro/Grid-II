@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 80vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr ;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+}
+header{
+    height: 15vh;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: header;
+    flex-wrap: wrap;
+}
+
+.lista{
+   
+    display: inline-block;
+}
+.lista a{
+    text-decoration: none;
+}
+.border{
+    border-right: 3px solid black;
+    padding: 5px;
+}
+.icono{
+    width: 40px;
+    height: 40px;
+}
+.navdos{
+    
+}
+main{
+    height: 75vh;
+    width: 100vw;
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} 
+.sectionUno{
+    
+  flex-basis: 50vw;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+   
+} 
+
+
+.navUno{
+    grid-area: navuno;
+    }
+.navDos{
+    grid-area: navdos;
+    }
+.gridImg{
+    grid-area: gridimg;
+    }
+
+
+.sectionDos{
+    
+    flex-basis: 50vw;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto{}
+
+.sectionDos div img{
+    width: 250px;
+    height: 200px;
+}
+    
+footer{
+    height: 10vh;
+    grid-area:footer;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    border-top: 2px solid black;
+}
+.iconofooter{
+    width: 40px;
+    height: 40px;
+    grid-area: iconofooter;
+}
+   
+.prss{
+    grid-area: prss;
+   
+
+}
+.contact{
+    grid-area: contact;
+    
+
+}
+
+
+@media(max-width:1400px) {
+}
+@media(max-width:1200px) {
+}
+@media(max-width:1024px) {
+}
+@media(max-width:768px) {
+}
+@media(max-width:600px) {
+}
+@media(max-width:480px) {
+    header{
+        display: grid;
+        grid-template-rows: 1fr 1fr ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "gridimg gridimg"
+        "navuno navdos";
+        justify-items: center;
+    }
+    .navUno{
+        justify-self: end;
+    }
+    .navDos{
+        justify-self:start;
+    }
+    #producto{
+        border-right: 3px solid black;
+        padding: 5px;
+    }
+    footer{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns:1fr ;
+        grid-template-areas:
+        "iconofooter"
+        "prss"
+        "contact" ;
+        justify-items:center;
+     
+    }
+   
+}
+@media(max-width:320px) {}
